@@ -5,11 +5,11 @@
    2. Rellena tus datos reales (sobre todo la contraseña del buzón)
    3. config.php NO se sube a git (está en .gitignore) — tu contraseña queda segura.
 
-   Buzón Titan (email de Hostinger):  host smtp.titan.email · puerto 465 · SSL
-   Hostinger Email (no Titan):        host smtp.hostinger.com · puerto 465 · SSL
+   Hostinger Email (tu caso):  host smtp.hostinger.com · puerto 465 · SSL
+   Titan (otros dominios):     host smtp.titan.email   · puerto 465 · SSL
    ============================================= */
 return [
-    'smtp_host'   => 'smtp.titan.email',     // servidor SMTP de tu proveedor de correo
+    'smtp_host'   => 'smtp.hostinger.com',   // servidor SMTP de tu proveedor de correo
     'smtp_port'   => 465,                     // 465 = SSL · 587 = TLS
     'smtp_secure' => 'ssl',                   // 'ssl' para 465 · 'tls' para 587
     'smtp_user'   => 'info@aristiq.studio',   // tu buzón completo
