@@ -675,8 +675,12 @@ textarea:focus-visible, summary:focus-visible {
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
 
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
-.reveal.visible { opacity: 1; transform: translateY(0); }
+/* El contenido es visible por defecto; la animación solo se activa
+   cuando el JS añade la clase .js-reveal al <html>. Así, si el JS
+   falla o queda cacheado, el contenido NUNCA se oculta. */
+.reveal { opacity: 1; transform: none; }
+html.js-reveal .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+html.js-reveal .reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* =============================================
    RESPONSIVE - TABLET
@@ -775,5 +779,5 @@ textarea:focus-visible, summary:focus-visible {
         transition-duration: 0.001ms !important;
         scroll-behavior: auto !important;
     }
-    .reveal { opacity: 1; transform: none; }
+    .reveal, html.js-reveal .reveal { opacity: 1 !important; transform: none !important; }
 }

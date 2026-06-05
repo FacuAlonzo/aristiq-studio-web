@@ -4,6 +4,11 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+    // ----- Activar animaciones de reveal (progressive enhancement) -----
+    // Marca el <html> para que el CSS oculte/anime los .reveal SOLO si este
+    // JS corre. Si el JS falla o queda cacheado, el contenido sigue visible.
+    document.documentElement.classList.add('js-reveal');
+
     // ----- Navigation Scroll Effect -----
     const nav = document.querySelector('.nav');
     if (nav) {
