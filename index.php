@@ -60,7 +60,6 @@ include __DIR__ . '/partials/header.php';
                 </div>
                 <ul class="hero-trust" aria-label="Garantías">
                     <li><strong>100%</strong><span>A medida</span></li>
-                    <li><strong>100%</strong><span>A tiempo</span></li>
                     <li><strong>24/7</strong><span>Soporte</span></li>
                 </ul>
             </div>
