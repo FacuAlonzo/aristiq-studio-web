@@ -15,3 +15,6 @@ desktop.ini
 # Logs y temporales
 *.log
 *.tmp
+
+# Configuración con credenciales (NUNCA subir)
+config.php
