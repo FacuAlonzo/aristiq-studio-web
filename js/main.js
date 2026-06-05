@@ -105,25 +105,25 @@ document.addEventListener('DOMContentLoaded', function () {
                     headers: { 'Accept': 'application/json' },
                     body: new FormData(form)
                 });
-                if (res.ok) {
-                    const data = await res.json().catch(() => ({ ok: true }));
-                    if (data.ok) { setNote('¡Mensaje enviado! Te responderemos muy pronto.', 'ok'); form.reset(); }
-                    else { setNote(data.error || 'No se pudo enviar. Escríbenos a info@aristiq.studio', 'err'); }
+                const data = await res.json().catch(() => null);
+                if (res.ok && data && data.ok) {
+                    setNote('¡Mensaje enviado! Te responderemos muy pronto.', 'ok');
+                    form.reset();
                 } else {
-                    fallbackMailto(name, email, form.subject.value.trim(), message);
+                    const msg = (data && data.error) ? data.error : 'No se pudo enviar el mensaje ahora mismo.';
+                    setNote(msg + ' Puedes escribirnos a <a href="mailto:info@aristiq.studio">info@aristiq.studio</a>.', 'err', true);
                 }
             } catch (err) {
-                fallbackMailto(name, email, form.subject.value.trim(), message);
+                setNote('No se pudo enviar el mensaje ahora mismo. Puedes escribirnos a <a href="mailto:info@aristiq.studio">info@aristiq.studio</a>.', 'err', true);
             } finally {
                 submitBtn.disabled = false; submitBtn.innerHTML = original;
             }
         });
     }
-    function setNote(msg, cls) { if (note) { note.textContent = msg; note.className = 'form-note ' + cls; } }
-    function fallbackMailto(name, email, subject, message) {
-        const body = `Nombre: ${name}%0AEmail: ${email}%0A%0A${encodeURIComponent(message)}`;
-        window.location.href = `mailto:info@aristiq.studio?subject=${encodeURIComponent(subject || 'Nuevo contacto')}&body=${body}`;
-        setNote('Abriendo tu cliente de correo… Si no se abre, escríbenos a info@aristiq.studio', 'ok');
+    function setNote(msg, cls, html) {
+        if (!note) return;
+        note.className = 'form-note ' + cls;
+        if (html) { note.innerHTML = msg; } else { note.textContent = msg; }
     }
 
 });
