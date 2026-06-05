@@ -60,16 +60,20 @@ $cuerpo .= "Asunto:  $asuntoLimpio\n";
 $cuerpo .= "-----------------------------------------\n\n";
 $cuerpo .= $mensaje . "\n";
 
-// Cabeceras (Reply-To al remitente para responder con un clic)
+// Remitente: una dirección REAL del propio dominio mejora mucho la entregabilidad.
+$REMITENTE = 'info@aristiq.studio';
+
+// Cabeceras (From del dominio; Reply-To al visitante para responder con un clic)
 $nombreSeguro = preg_replace('/[\r\n]+/', ' ', $nombre);
 $emailSeguro  = preg_replace('/[\r\n]+/', '', $email);
-$headers  = "From: AristiQ Studio <no-reply@aristiq.studio>\r\n";
+$headers  = "From: AristiQ Studio <$REMITENTE>\r\n";
 $headers .= "Reply-To: $nombreSeguro <$emailSeguro>\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion();
 
-// --- Enviar ---
-$enviado = @mail($DESTINO, '=?UTF-8?B?' . base64_encode($titulo) . '?=', $cuerpo, $headers);
+// --- Enviar (5º parámetro: envelope sender, ayuda con SPF en Hostinger) ---
+$enviado = @mail($DESTINO, '=?UTF-8?B?' . base64_encode($titulo) . '?=', $cuerpo, $headers, '-f ' . $REMITENTE);
 
 if ($enviado) {
     responder(true, '', $wantsJson);
