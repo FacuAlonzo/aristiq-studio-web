@@ -106,11 +106,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     body: new FormData(form)
                 });
                 const data = await res.json().catch(() => null);
-                if (res.ok && data && data.ok) {
+                // Web3Forms responde { success: true/false, message }
+                if (res.ok && data && data.success) {
                     setNote('¡Mensaje enviado! Te responderemos muy pronto.', 'ok');
                     form.reset();
                 } else {
-                    const msg = (data && data.error) ? data.error : 'No se pudo enviar el mensaje ahora mismo.';
+                    const msg = (data && data.message) ? data.message : 'No se pudo enviar el mensaje ahora mismo.';
                     setNote(msg + ' Puedes escribirnos a <a href="mailto:info@aristiq.studio">info@aristiq.studio</a>.', 'err', true);
                 }
             } catch (err) {

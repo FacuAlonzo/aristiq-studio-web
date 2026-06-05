@@ -219,14 +219,17 @@ include __DIR__ . '/partials/header.php';
                 </ul>
                 <a href="https://calendly.com/facualonzo347/30min" target="_blank" rel="noopener noreferrer" class="cta-call">o agenda una llamada de 30 min →</a>
             </div>
-            <form class="contact-form" id="contact-form" action="enviar.php" method="POST" novalidate>
+            <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                <input type="hidden" name="access_key" value="c72aba74-fef0-48fe-94b3-e76461ab4c65">
+                <input type="hidden" name="subject" value="Nuevo contacto desde aristiq.studio">
+                <input type="hidden" name="from_name" value="Web AristiQ Studio">
                 <div class="form-row">
                     <div class="form-field"><label for="cf-name">Nombre</label><input type="text" id="cf-name" name="name" autocomplete="name" required placeholder="Tu nombre"></div>
                     <div class="form-field"><label for="cf-email">Email</label><input type="email" id="cf-email" name="email" autocomplete="email" required placeholder="tu@email.com"></div>
                 </div>
-                <div class="form-field"><label for="cf-subject">Tipo de proyecto</label><input type="text" id="cf-subject" name="subject" placeholder="Web corporativa, e-commerce, app..."></div>
+                <div class="form-field"><label for="cf-subject">Tipo de proyecto</label><input type="text" id="cf-subject" name="tipo_proyecto" placeholder="Web corporativa, e-commerce, app..."></div>
                 <div class="form-field"><label for="cf-message">Mensaje</label><textarea id="cf-message" name="message" rows="4" required placeholder="Cuéntanos qué tienes en mente"></textarea></div>
-                <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+                <input type="checkbox" name="botcheck" class="hp" tabindex="-1" style="display:none" aria-hidden="true">
                 <button type="submit" class="btn btn-primary btn-block">Enviar mensaje<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></button>
                 <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
             </form>
