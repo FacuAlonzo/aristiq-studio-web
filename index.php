@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Primary SEO -->
-    <title>AristiQ Studio | Desarrollo Web Premium que Convierte</title>
-    <meta name="description" content="Estudio de desarrollo web premium. Diseñamos y construimos sitios corporativos, e-commerce y aplicaciones web rápidas, optimizadas para SEO y pensadas para convertir. 100% a medida.">
-    <meta name="author" content="AristiQ Studio">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#111317">
-    <link rel="canonical" href="https://www.aristiq.studio/">
-
-    <!-- Open Graph -->
+<?php
+$title       = 'AristiQ Studio | Desarrollo Web Premium que Convierte';
+$description  = 'Estudio de desarrollo web premium. Diseñamos y construimos sitios corporativos, e-commerce y aplicaciones web rápidas, optimizadas para SEO y pensadas para convertir. 100% a medida.';
+$canonical    = 'https://www.aristiq.studio/';
+$home         = '';
+$extra_head   = <<<'HTML'
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_ES">
     <meta property="og:url" content="https://www.aristiq.studio/">
@@ -21,26 +12,10 @@
     <meta property="og:description" content="Sitios web rápidos, optimizados para SEO y diseñados para convertir. 100% a medida, para marcas que apuntan alto.">
     <meta property="og:image" content="https://www.aristiq.studio/assets/images/banner-logo.png">
     <meta property="og:image:alt" content="AristiQ Studio — Desarrollo Web Premium">
-
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AristiQ Studio | Desarrollo Web Premium que Convierte">
     <meta name="twitter:description" content="Sitios web rápidos, optimizados para SEO y diseñados para convertir. 100% a medida.">
     <meta name="twitter:image" content="https://www.aristiq.studio/assets/images/banner-logo.png">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css?v=4">
-
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -65,32 +40,9 @@
       ]
     }
     </script>
-</head>
-<body>
-    <a href="#contenido" class="skip-link">Saltar al contenido</a>
-
-    <!-- Navigation -->
-    <header>
-        <nav class="nav" aria-label="Navegación principal">
-            <div class="nav-container">
-                <a href="index.html" class="logo" aria-label="AristiQ Studio — Inicio">
-                    <img src="assets/images/banner-logo.png" alt="AristiQ Studio" class="logo-img" width="220" height="55">
-                </a>
-                <div class="nav-links" id="nav-links">
-                    <a href="#servicios">Servicios</a>
-                    <a href="#trabajo">Trabajo</a>
-                    <a href="#proceso">Proceso</a>
-                    <a href="#faq">FAQ</a>
-                    <a href="#contacto" class="btn btn-primary nav-cta">Empezar proyecto</a>
-                </div>
-                <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </nav>
-    </header>
-
-    <main id="contenido">
+HTML;
+include __DIR__ . '/partials/header.php';
+?>
     <!-- Hero -->
     <section class="hero" id="inicio">
         <div class="hero-bg" aria-hidden="true"></div>
@@ -112,8 +64,6 @@
                     <li><strong>24/7</strong><span>Soporte</span></li>
                 </ul>
             </div>
-
-            <!-- Visual: mockup de navegador construido en CSS -->
             <div class="hero-visual" aria-hidden="true">
                 <div class="browser">
                     <div class="browser-bar">
@@ -140,8 +90,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Marquee de tecnologías -->
         <div class="marquee" aria-label="Tecnologías que dominamos">
             <div class="marquee-track">
                 <span>React</span><span>·</span><span>Next.js</span><span>·</span><span>Node.js</span><span>·</span><span>WordPress</span><span>·</span><span>Shopify</span><span>·</span><span>TypeScript</span><span>·</span>
@@ -159,47 +107,17 @@
                 <p>Soluciones integrales de desarrollo web, de la estrategia al mantenimiento, con un estándar de calidad que se nota.</p>
             </header>
             <div class="services-grid">
-                <article class="service-card reveal">
-                    <span class="service-num">01</span>
-                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div>
-                    <h3>Sitios Web Corporativos</h3>
-                    <p>Presencia digital que refleja la altura de tu marca y convierte cada visita en una oportunidad.</p>
-                </article>
-                <article class="service-card reveal">
-                    <span class="service-num">02</span>
-                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
-                    <h3>Aplicaciones Web</h3>
-                    <p>Plataformas robustas y escalables que automatizan procesos y mejoran la eficiencia de tu empresa.</p>
-                </article>
-                <article class="service-card reveal">
-                    <span class="service-num">03</span>
-                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
-                    <h3>E-Commerce Premium</h3>
-                    <p>Tiendas online optimizadas para conversión, con una experiencia de compra fluida y pagos seguros.</p>
-                </article>
-                <article class="service-card reveal">
-                    <span class="service-num">04</span>
-                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
-                    <h3>Optimización de Performance</h3>
-                    <p>Aceleramos tu sitio al máximo para mejorar la experiencia, el SEO y, en consecuencia, las ventas.</p>
-                </article>
-                <article class="service-card reveal">
-                    <span class="service-num">05</span>
-                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></div>
-                    <h3>Integraciones & APIs</h3>
-                    <p>Conectamos tu web con CRMs, ERPs, pasarelas de pago y cualquier sistema que tu negocio necesite.</p>
-                </article>
-                <article class="service-card reveal">
-                    <span class="service-num">06</span>
-                    <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
-                    <h3>Soporte & Mantenimiento</h3>
-                    <p>Planes de mantenimiento continuo para que tu inversión digital siga rindiendo al máximo.</p>
-                </article>
+                <article class="service-card reveal"><span class="service-num">01</span><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg></div><h3>Sitios Web Corporativos</h3><p>Presencia digital que refleja la altura de tu marca y convierte cada visita en una oportunidad.</p></article>
+                <article class="service-card reveal"><span class="service-num">02</span><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Aplicaciones Web</h3><p>Plataformas robustas y escalables que automatizan procesos y mejoran la eficiencia de tu empresa.</p></article>
+                <article class="service-card reveal"><span class="service-num">03</span><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div><h3>E-Commerce Premium</h3><p>Tiendas online optimizadas para conversión, con una experiencia de compra fluida y pagos seguros.</p></article>
+                <article class="service-card reveal"><span class="service-num">04</span><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3>Optimización de Performance</h3><p>Aceleramos tu sitio al máximo para mejorar la experiencia, el SEO y, en consecuencia, las ventas.</p></article>
+                <article class="service-card reveal"><span class="service-num">05</span><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></div><h3>Integraciones & APIs</h3><p>Conectamos tu web con CRMs, ERPs, pasarelas de pago y cualquier sistema que tu negocio necesite.</p></article>
+                <article class="service-card reveal"><span class="service-num">06</span><div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>Soporte & Mantenimiento</h3><p>Planes de mantenimiento continuo para que tu inversión digital siga rindiendo al máximo.</p></article>
             </div>
         </div>
     </section>
 
-    <!-- Trabajo / Capacidades (mockups en CSS) -->
+    <!-- Trabajo -->
     <section class="work" id="trabajo">
         <div class="container">
             <header class="section-head reveal">
@@ -233,7 +151,7 @@
         </div>
     </section>
 
-    <!-- Proceso + Nosotros -->
+    <!-- Proceso -->
     <section class="process" id="proceso">
         <div class="container process-grid">
             <div class="process-intro reveal">
@@ -256,7 +174,7 @@
         </div>
     </section>
 
-    <!-- Statement / Por qué -->
+    <!-- Statement -->
     <section class="statement">
         <div class="container reveal">
             <span class="eyebrow center">Por qué AristiQ</span>
@@ -287,7 +205,7 @@
         </div>
     </section>
 
-    <!-- CTA + Formulario (backend PHP) -->
+    <!-- CTA + Formulario -->
     <section class="cta" id="contacto">
         <div class="container cta-card reveal">
             <div class="cta-intro">
@@ -314,35 +232,4 @@
             </form>
         </div>
     </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <img src="assets/images/banner-logo.png" alt="AristiQ Studio" class="footer-logo" width="240" height="60" loading="lazy">
-                    <p>Desarrollo web premium que convierte. Performance, UX e integraciones para marcas que apuntan alto.</p>
-                    <div class="footer-social">
-                        <a href="https://www.instagram.com/aristiq.studio" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-                        <a href="mailto:info@aristiq.studio" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></a>
-                    </div>
-                </div>
-                <nav class="footer-nav" aria-label="Pie de página">
-                    <div class="footer-col"><h3>Navegación</h3><a href="#servicios">Servicios</a><a href="#trabajo">Trabajo</a><a href="#proceso">Proceso</a><a href="#faq">FAQ</a></div>
-                    <div class="footer-col"><h3>Servicios</h3><a href="#servicios">Sitios Corporativos</a><a href="#servicios">E-Commerce</a><a href="#servicios">Aplicaciones Web</a><a href="#servicios">Optimización</a></div>
-                    <div class="footer-col"><h3>Legal</h3><a href="politica-privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a href="politica-cookies.html">Cookies</a></div>
-                </nav>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 AristiQ Studio. Todos los derechos reservados. Hecho con disciplina y claridad.</p>
-                <a href="#contacto" class="btn btn-outline btn-sm">Empezar proyecto</a>
-            </div>
-        </div>
-    </footer>
-
-    <button class="scroll-top" id="scroll-top" aria-label="Volver arriba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg></button>
-
-    <script src="js/main.js?v=3"></script>
-</body>
-</html>
+<?php include __DIR__ . '/partials/footer.php'; ?>

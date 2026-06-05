@@ -20,7 +20,7 @@ function responder($ok, $mensaje = '', $wantsJson = false) {
     } else {
         // Respaldo sin JS: redirige al inicio con un parámetro de estado
         $estado = $ok ? 'ok' : 'error';
-        header('Location: index.html?enviado=' . $estado . '#contacto');
+        header('Location: index.php?enviado=' . $estado . '#contacto');
     }
     exit;
 }

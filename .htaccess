@@ -1,0 +1,26 @@
+# =============================================
+# AristiQ Studio — Configuración Apache/LiteSpeed
+# =============================================
+
+# Página de inicio
+DirectoryIndex index.php index.html
+
+RewriteEngine On
+
+# Redirecciones 301: URLs antiguas .html -> nuevas .php
+RewriteRule ^index\.html$ / [R=301,L]
+RewriteRule ^politica-privacidad\.html$ /politica-privacidad.php [R=301,L]
+RewriteRule ^terminos\.html$ /terminos.php [R=301,L]
+RewriteRule ^politica-cookies\.html$ /politica-cookies.php [R=301,L]
+
+# Bloquear acceso directo a los componentes internos
+RewriteRule ^partials/ - [F,L]
+
+# Cabeceras de caché para assets estáticos
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
+</IfModule>

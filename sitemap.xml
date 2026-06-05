@@ -6,17 +6,17 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.aristiq.studio/politica-privacidad.html</loc>
+    <loc>https://www.aristiq.studio/politica-privacidad.php</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.aristiq.studio/terminos.html</loc>
+    <loc>https://www.aristiq.studio/terminos.php</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.aristiq.studio/politica-cookies.html</loc>
+    <loc>https://www.aristiq.studio/politica-cookies.php</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
