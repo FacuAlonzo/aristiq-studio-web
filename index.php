@@ -161,7 +161,7 @@ include __DIR__ . '/partials/header.php';
                     <div><strong data-count="100" data-suffix="%">100%</strong><span>Proyectos a medida</span></div>
                     <div><strong data-count="0" data-suffix="">0</strong><span>Plantillas genéricas</span></div>
                 </div>
-                <a href="https://calendly.com/facualonzo347/30min" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Agendar sesión de descubrimiento</a>
+                <a href="https://calendly.com/facualonzo347/reunion-aristiq" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Agendar sesión de descubrimiento</a>
             </div>
             <ol class="timeline reveal">
                 <li><span class="t-num">1</span><div><h3>Descubrimiento</h3><p>Entendemos tus objetivos, tu audiencia y tus métricas de éxito.</p></div></li>
@@ -199,7 +199,7 @@ include __DIR__ . '/partials/header.php';
                 <details class="faq-item"><summary>¿Trabajáis con plantillas?</summary><div class="faq-answer"><p>No. Cada proyecto es 100% a medida: diseñamos y desarrollamos según tu marca, objetivos y audiencia, sin plantillas genéricas.</p></div></details>
                 <details class="faq-item"><summary>¿Qué tecnologías utilizáis?</summary><div class="faq-answer"><p>Elegimos la herramienta correcta para cada caso: React, Next.js, Node.js, WordPress o Shopify, entre otras, siempre buscando rendimiento y mantenibilidad.</p></div></details>
                 <details class="faq-item"><summary>¿Ofrecéis soporte después del lanzamiento?</summary><div class="faq-answer"><p>Sí. Contamos con planes de mantenimiento continuo y acompañamiento post-lanzamiento para que tu inversión siga rindiendo.</p></div></details>
-                <details class="faq-item"><summary>¿Cómo empezamos a trabajar juntos?</summary><div class="faq-answer"><p>Agenda una llamada de 30 minutos o escríbenos desde el formulario. En esa primera sesión entendemos tus objetivos y exploramos cómo ayudarte.</p></div></details>
+                <details class="faq-item"><summary>¿Cómo empezamos a trabajar juntos?</summary><div class="faq-answer"><p>Agenda una llamada de 15 minutos o escríbenos desde el formulario. En esa primera sesión entendemos tus objetivos y exploramos cómo ayudarte.</p></div></details>
             </div>
         </div>
     </section>
@@ -216,7 +216,7 @@ include __DIR__ . '/partials/header.php';
                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Primera consultoría sin coste</li>
                     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Sin compromiso</li>
                 </ul>
-                <a href="https://calendly.com/facualonzo347/30min" target="_blank" rel="noopener noreferrer" class="cta-call">o agenda una llamada de 30 min →</a>
+                <a href="https://calendly.com/facualonzo347/reunion-aristiq" target="_blank" rel="noopener noreferrer" class="cta-call">o agenda una llamada de 15 min →</a>
             </div>
             <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
                 <input type="hidden" name="access_key" value="c72aba74-fef0-48fe-94b3-e76461ab4c65">

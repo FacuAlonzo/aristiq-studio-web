@@ -39,20 +39,21 @@
       #ari-widget *{box-sizing:border-box;}
       #ari-launcher{
         position:fixed; bottom:24px; right:24px; z-index:99998;
-        width:64px; height:64px; padding:0; border:1px solid rgba(210,172,99,.4); border-radius:50%;
-        background:#0e0e11; cursor:pointer; overflow:hidden;
+        width:64px; height:64px; padding:0; border:1px solid rgba(210,172,99,.32); border-radius:50%;
+        background:#0e0e11; cursor:pointer; overflow:hidden; opacity:.9;
         display:flex; align-items:center; justify-content:center;
-        box-shadow:0 8px 30px rgba(210,172,99,.35), 0 2px 8px rgba(0,0,0,.4);
-        transition:transform .25s ease, box-shadow .25s ease;
-        animation:ari-breathe 3.6s ease-in-out infinite;
+        box-shadow:0 6px 22px rgba(210,172,99,.20), 0 2px 8px rgba(0,0,0,.45);
+        transition:transform .25s ease, opacity .25s ease, box-shadow .25s ease;
+        animation:ari-breathe 5s ease-in-out infinite;
       }
-      #ari-launcher:hover{ transform:scale(1.06); }
-      #ari-launcher img{ width:100%; height:100%; object-fit:cover; transform:scale(1.18); display:block; }
+      #ari-launcher:hover{ transform:scale(1.06); opacity:1; }
+      #ari-launcher img{ width:100%; height:100%; object-fit:cover; transform:scale(1.18); display:block; animation:ari-spin 45s linear infinite; }
       @keyframes ari-breathe{
-        0%,100%{ box-shadow:0 8px 30px rgba(210,172,99,.30), 0 2px 8px rgba(0,0,0,.4); }
-        50%{ box-shadow:0 8px 42px rgba(210,172,99,.55), 0 2px 8px rgba(0,0,0,.4); }
+        0%,100%{ box-shadow:0 6px 20px rgba(210,172,99,.15), 0 2px 8px rgba(0,0,0,.45); }
+        50%{ box-shadow:0 6px 30px rgba(210,172,99,.30), 0 2px 8px rgba(0,0,0,.45); }
       }
-      @media (prefers-reduced-motion: reduce){ #ari-launcher{ animation:none; } }
+      @keyframes ari-spin{ from{ transform:scale(1.18) rotate(0deg); } to{ transform:scale(1.18) rotate(360deg); } }
+      @media (prefers-reduced-motion: reduce){ #ari-launcher{ animation:none; } #ari-launcher img, .ari-emblem img{ animation:none; } }
       #ari-panel{
         position:fixed; bottom:100px; right:24px; z-index:99999;
         width:380px; max-width:calc(100vw - 32px);
@@ -70,7 +71,7 @@
       .ari-emblem{ width:38px; height:38px; border-radius:50%; flex:none; overflow:hidden;
         background:#0e0e11; border:1px solid rgba(210,172,99,.35);
         display:flex; align-items:center; justify-content:center; }
-      .ari-emblem img{ width:100%; height:100%; object-fit:cover; transform:scale(1.18); display:block; }
+      .ari-emblem img{ width:100%; height:100%; object-fit:cover; transform:scale(1.18); display:block; animation:ari-spin 45s linear infinite; }
       .ari-head h3{ margin:0; color:var(--ari-text); font-size:15px; font-weight:600;
         font-family:var(--ari-font-display); letter-spacing:.2px; }
       .ari-head p{ margin:2px 0 0; color:var(--ari-text-dim); font-size:12px; }
